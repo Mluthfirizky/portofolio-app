@@ -18,7 +18,11 @@
         android:id="@+id/experienceFragment"
         android:name="yayasan.idn.portofolio.ui.ExperienceFragment"
         android:label="Experience"
-        tools:layout="@layout/fragment_experience" />
+        tools:layout="@layout/fragment_experience">
+        <action
+            android:id="@+id/action_experienceFragment_to_experienceDetailFragment"
+            app:destination="@id/experienceDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/flutterFragment"
         android:name="yayasan.idn.portofolio.ui.FlutterFragment"
@@ -34,4 +38,13 @@
         android:name="yayasan.idn.portofolio.ui.SettingFragment"
         android:label="Setting"
         tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/experienceDetailFragment"
+        android:name="yayasan.idn.portofolio.ExperienceDetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_experience_detail">
+        <argument
+            android:name="experience"
+            app:argType="yayasan.idn.portofolio.data.Portofolio" />
+    </fragment>
 </navigation>

@@ -32,6 +32,30 @@ object PortofolioData {
         R.drawable.office
     )
 
+    private val titleExperience = arrayOf(
+        "Android Assosiated Developer",
+        "Android Pemula",
+        "Memulai bahasa Kotlin",
+        "Memulai bahasa Python",
+        "Solid Principle",
+    )
+
+    private val detailExperience = arrayOf(
+        "Sertifikat ini merupakan sertifikat yang diterbitkan langsung oleh google untuk developer android",
+        "Android Pemula merupakan course yang diadakan oleh dicoding untuk memulai belajar program android",
+        "Memulai bahasa Kotlin merupakan course yang bertujuan untuk mempelajari bahasa kotlin",
+        "Memulai bahasa Python merupakan course yang bertujuan untuk mempelajari bahasa python",
+        "Solid Principle mempelajari tentang oop,clean code,dll",
+    )
+
+    private val imageExperience = intArrayOf(
+        R.drawable.aad,
+        R.drawable.androidcert,
+        R.drawable.kotlincert,
+        R.drawable.pythoncert,
+        R.drawable.solidcert,
+    )
+
     private val link = arrayOf(
         "https://search.muz.li/NmU5MmY5YTM4",
         "https://pin.it/3ttUNfs",
@@ -54,6 +78,18 @@ object PortofolioData {
                 android.image = poster[position]
                 android.link = link[position]
                 list.add(android)
+            }
+            return list
+        }
+    val listDataExperience: ArrayList<Portofolio>
+        get() {
+            val list = arrayListOf<Portofolio>()
+            for (position in titleExperience.indices){
+                val experience = Portofolio()
+                experience.title = titleExperience[position]
+                experience.detail = detailExperience[position]
+                experience.image = imageExperience[position]
+                list.add(experience)
             }
             return list
         }

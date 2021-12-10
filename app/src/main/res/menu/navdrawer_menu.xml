@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/profileFragment"
-        android:icon="@drawable/profile"
+        android:icon="@drawable/profile_header"
         android:title="Profile"/>
     <item
         android:id="@+id/flutterFragment"
